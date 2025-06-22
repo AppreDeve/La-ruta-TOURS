@@ -1,0 +1,197 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+/* Menú */
+.menu {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: #f9f9f9;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 30px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* Logo */
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: black;
+  flex: 1;
+}
+
+/* Navegación */
+.nav-links ul {
+  display: flex;
+  gap: 100px; /* Espacio entre las palabras del menú */
+  list-style: none;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-links ul li a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  padding: 10px;
+  transition: all 0.3s ease;
+}
+
+.nav-links ul li a:hover {
+  color: #ffb703;
+  border-bottom: 2px solid #ffb703;
+}
+
+/* Botón login */
+.login {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.login button {
+  padding: 8px 16px;
+  background-color: #219ebc;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.login button:hover {
+  background-color: #ffb703;
+}
+
+/*CUERPO DE SECCIÓN DE NOSOTROS*/
+/* ===== Sección Amarilla (introducción) ===== */
+.nosotros-intro {
+  background-color: #fcbf02;
+  height: 50vh;                  /* Fijamos altura visible constante */
+  position: relative;            /* Necesario para la superposición */
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 40px 20px;
+  font-size: 16px;
+  line-height: 1.8;
+  color: #000;
+  overflow: visible;             /* Asegura que las tarjetas puedan sobresalir visualmente */
+}
+/* ===== Contenedor de las tres tarjetas ===== */
+.nosotros-valores {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 40px;
+  background-color: #fff;
+  padding: 60px 20px;
+  margin-top: -140px;           /* 🔼 Subimos las tarjetas hacia la sección amarilla */
+  position: relative;
+  z-index: 2;
+}
+
+
+
+/* ===== Estilo general para cada tarjeta ===== */
+.tarjeta {
+  background-color: #f9f9f9;
+  border: 1px solid #aaa;
+  padding: 20px;
+  width: 250px;
+  height: 280px;            /* 🔧 Más altura para forma rectangular */
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* Sombra más visible */
+  border-radius: 8px;       /* Opcional: bordes más suaves */
+}
+
+/* ===== Título de cada tarjeta ===== */
+.tarjeta h3 {
+  margin-bottom: 10px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .menu {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-links ul {
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+  }
+
+  .login {
+    width: 100%;
+    justify-content: flex-start;
+    margin-top: 10px;
+  }
+}
+
+
+/* FOOTER */
+footer {
+  display: flex;
+  justify-content: center;
+  padding: 40px;
+  background-color: #023047;
+}
+
+.redes {
+  display: flex;
+  gap: 30px;
+}
+
+.redes a {
+  background-color: #2c2c2c;
+  width: 45px;
+  height: 45px;
+  border-radius: 15px 0 15px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s ease;
+}
+
+.redes a:hover {
+  transform: scale(1.1);
+}
+
+.redes svg {
+  width: 22px;
+  height: 22px;
+  fill: white;
+}
+
+.instagram:hover {
+  background-color: #d62976;
+}
+
+.twitter:hover {
+  background-color: #1da1f2;
+}
+
+.linkedin:hover {
+  background-color: #0072b1;
+}
+
+.whatsapp:hover {
+  background-color: #25d366;
+}
