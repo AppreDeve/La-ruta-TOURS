@@ -20,7 +20,11 @@ class LoginController extends Controller
             // Aquí podrías iniciar sesión o simplemente registrar el acceso
             // Ejemplo: guardar un log de acceso
             // ...
-            return redirect()->back()->with('success', 'Inicio de sesión exitoso.');
+            // Iniciar sesión manualmente
+            // Usar el guard por defecto para iniciar sesión con el modelo personalizado
+            \Illuminate\Support\Facades\Auth::guard()->login($usuario);
+            // Redirigir a la página de viajes (ajusta la ruta si deseas otro destino)
+            return redirect()->route('viajes')->with('success', 'Inicio de sesión exitoso.');
         } else {
             return redirect()->back()->with('error', 'Credenciales incorrectas.');
         }

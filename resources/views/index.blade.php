@@ -26,7 +26,17 @@
     </nav>
 
     <div class="login">
-      <button onclick="location.href='{{route('login')}}'">Iniciar sesión</button>
+      @auth
+        <div class="user-profile" style="display: flex; align-items: center; gap: 8px;">
+          <span>{{ Auth::user()->name }}</span>
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="12" cy="8" r="4" fill="#333"/>
+            <path d="M4 20c0-4 4-6 8-6s8 2 8 6" fill="#333"/>
+          </svg>
+        </div>
+      @else
+        <button onclick="location.href='{{route('login')}}'">Iniciar sesión</button>
+      @endauth
     </div>
   </div>
 </header>
