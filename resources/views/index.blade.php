@@ -18,18 +18,20 @@
     
     <nav class="nav-links">
       <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="{{route('viajes')}}">Viajes</a></li>
-        <li><a href="#">Galería</a></li>
-        <li><a href="{{route('nosotros')}}">Nosotros</a></li>
+        <li><a href="{{ url('/') }}">Home</a></li>
+        <li><a href="{{ route('viajes') }}">Viajes</a></li>
+        <li><a href="{{ route('galeria') }}">Galería</a></li>
+        <li><a href="{{ route('nosotros') }}">Nosotros</a></li>
       </ul>
     </nav>
 
+
     <div class="login">
-      <button onclick="location.href='{{route('login')}}'">Iniciar sesión</button>
+      <button type="button" onclick="location.href='{{ route('login') }}'">
+        Iniciar sesión</button>
     </div>
-  </div>
 </header>
+
 
 
     <!-- CUERPO DE LA PÁGINA -->

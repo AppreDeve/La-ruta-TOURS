@@ -15,10 +15,10 @@
     
     <nav class="nav-links">
       <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="viajes.html">Viajes</a></li>
-        <li><a href="#">Galería</a></li>
-        <li><a href="nosotros.html">Nosotros</a></li>
+        <li><a href="{{ url('/') }}">Home</a></li>
+        <li><a href="{{ route('viajes') }}">Viajes</a></li>
+        <li><a href="{{ route('galeria') }}">Galería</a></li>
+        <li><a href="{{ route('nosotros') }}">Nosotros</a></li>
       </ul>
     </nav>
 
@@ -33,7 +33,7 @@
 <!-- Contenedor 1 -->
 <div class="tarjeta-viaje">
   <!-- Imagen del viaje (lado izquierdo) -->
-  <img src="/IMG/destequila.jpg" alt="Imagen del viaje 1">
+  <img src="{{ asset('img/destequila.webp') }}" alt="Imagen del viaje 1">
    <!-- Información del viaje (lado derecho) -->
   <div class="info-viaje">
     <h3>TEQUILA, JALISCO</h3>
@@ -113,7 +113,7 @@
 <!-- Contenedor 2 -->
 <!-- ZOOLOGICO DE GDL -->
 <div class="tarjeta-viaje">
-  <img src="/IMG/deszoo.jpg" alt="Imagen del viaje 2">
+  <img src="{{ asset('img/deszoo.webp') }}" alt="Imagen del viaje 2">
   <div class="info-viaje">
     <h3>ZOOLÓGICO, GUADALAJARA</h3>
     <p><strong>Fecha de salida:</strong> 12-Noviembre-2025</p>
@@ -206,7 +206,7 @@
 <!-- Contenedor 3 -->
 <!-- SAN SEBASTIAN DEL OESTE -->
 <div class="tarjeta-viaje">
-  <img src="/IMG/dessansebas.jpg" alt="Imagen del viaje 3">
+  <img src="{{ asset('img/dessansebas.webp') }}" alt="Imagen del viaje 3">
   <div class="info-viaje">
     <h3>SAN SEBASTIÁN DEL OESTE</h3>
     <p><strong>Fecha de salida:</strong> 05-Diciembre-2025</p>
@@ -280,7 +280,7 @@
 <!-- Contenedor 4 -->
 <!--CARNAVAL DE MAZATLAN-->
 <div class="tarjeta-viaje">
-  <img src="/IMG/desmaza.jpg" alt="Imagen del viaje 4">
+  <img src="{{ asset('img/desmaza.webp') }}" alt="Imagen del viaje 4">
   <div class="info-viaje">
     <h3>MAZATLÁN</h3>
     <p><strong>Fecha de salida:</strong> 20-Diciembre-2025</p>
@@ -354,7 +354,7 @@
 <!-- Contenedor 5 -->
 <!-- MARIPOSA MONARCA, PÁTZCUARO E ISLA DE JANITZIO -->
 <div class="tarjeta-viaje">
-  <img src="/IMG/desmazamitla.jpg" alt="Imagen del viaje 5">  <!--CAMBIAR IMAGEN-->
+  <img src="{{ asset('img/desmazamitla.webp') }}" alt="Imagen del viaje 5">  <!--CAMBIAR IMAGEN-->
   <div class="info-viaje">
     <h3>MARIPOSA MONARCA, PÁTZCUARO E ISLA DE JANITZIO</h3>
     <p><strong>Fecha de salida:</strong> 15-Enero-2026</p>

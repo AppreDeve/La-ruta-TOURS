@@ -1,11 +1,12 @@
 body {
   height: 100vh;
   margin: 0;
-  background-image: url('/IMG/fondologin.png'); 
+
+  /*background-image: url('/IMG/fondologin.png'); 
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  background-attachment: fixed;
+  background-attachment: fixed;*/
 }
 
 
@@ -216,13 +217,12 @@ body {
 /* Estilo del enlace */
 .forgot-link {
   font-size: 14px;
-  color:#666; /* CAMBIAR COLOR DE LAS LETRAS DEL LINK */
-  text-decoration: underline;
-  cursor: pointer;
+  color:#ffb703; /* CAMBIAR COLOR DE LAS LETRAS DEL LINK (LOGIN)*/
+  text-decoration: underline; 
 }
 
 .forgot-link:hover {
-  color: #ffb703; 
+  color: #f9f9f9; 
 }
 
 /* Contenedor del enlace */
@@ -233,14 +233,14 @@ body {
 /* Estilo del enlace "Iniciar sesión con Google" */
 .google-link {
   font-size: 14px;
-  color: #666; /* CAMBIAR COLOR DE LAS LETRAS DEL LINK */
+  color: #ffb703; /* CAMBIAR COLOR DE LAS LETRAS DEL LINK (SIGN UP) */
   text-decoration: underline;
   cursor: pointer;
   display: inline-block;
 }
 
 .google-link:hover {
-  color: #ffb703; 
+  color: #f9f9f9; 
 }
 
 /* Solo para centrar el wrapper en la pantalla sin afectar el fondo */
@@ -252,5 +252,55 @@ body {
   padding: 40px 0;
   position: relative;
   z-index: 1;
+}
+
+/*PANTALLA DIVIDIDA*/
+
+/*Contenedor principal que divide la pantalla en 2 columnas */
+.login-container {
+  display: flex; 
+  height: 100vh; /* Ocupa toda la altura de la pantalla */
+}
+
+/*Mitad izquierda (donde va el formulario) */
+.login-left {
+  flex: 1;
+  display: flex; /* Para centrar el contenido */
+  justify-content: center;
+  align-items: center;
+  background: #fff; 
+}
+
+/*Mitad derecha (donde va la imagen) */
+.login-right {
+  flex: 1;
+  background: #023047; /* Color de fondo detrás de la imagen */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/*Imagen que llena todo el lado derecho */
+.login-right img {
+  width: 100%; /* Que ocupe todo el ancho */
+  height: 100%; /* Que ocupe todo el alto */
+  object-fit: cover; /* Para que no se deforme */
+}
+
+/*RESPONSIVO: en móviles la imagen se oculta */
+@media (max-width: 768px) {
+  .login-container {
+    flex-direction: column; /* Se apilan en lugar de estar lado a lado */
+  }
+
+  .login-right {
+    display: none; /* Ocultamos la imagen en móviles */
+  }
+
+  .login-left {
+    flex: none;
+    width: 100%; /* El formulario ocupa todo el ancho */
+    padding: 20px;
+  }
 }
 
