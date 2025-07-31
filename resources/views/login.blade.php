@@ -21,10 +21,11 @@
 
             <!----INICIO DE SESIÓN-->
             <div class="title">Iniciar Sesión</div>
-            <form action="" class="flip-card__form">
-              <input type="email" placeholder="Correo" name="email" class="flip-card__input">
-              <input type="password" placeholder="Contraseña" name="password" class="flip-card__input">
-              <button class="flip-card__btn">Confirmar</button>
+            <form action="{{ route('login.store') }}" method="POST" class="flip-card__form">
+              @csrf
+              <input type="email" placeholder="Correo" name="email" class="flip-card__input" required>
+              <input type="password" placeholder="Contraseña" name="password" class="flip-card__input" required>
+              <button type="submit" class="flip-card__btn">Confirmar</button>
             </form>
             <!--Link para recuperar contraseña-->        <!--MODIFICAR-->
             <div class="forgot-password">
@@ -35,11 +36,12 @@
           <div class="flip-card__back">
             <!----REGISTRO-->
             <div class="title">Registro</div>
-            <form action="" class="flip-card__form">
-              <input type="name" placeholder="Nombre" class="flip-card__input">
-              <input type="email" placeholder="Correo" name="email" class="flip-card__input">
-              <input type="password" placeholder="Contraseña" name="password" class="flip-card__input">
-              <button class="flip-card__btn">Confirmar</button>
+            <form action="{{ route('register.store') }}" method="POST" class="flip-card__form">
+              @csrf
+              <input type="text" placeholder="Nombre" name="name" class="flip-card__input" required>
+              <input type="email" placeholder="Correo" name="email" class="flip-card__input" required>
+              <input type="password" placeholder="Contraseña" name="password" class="flip-card__input" required>
+              <button type="submit" class="flip-card__btn">Confirmar</button>
             </form>
             <!--Link para iniciar sesion con google-->        <!--MODIFICAR-->
             <div class="google-link-container">
