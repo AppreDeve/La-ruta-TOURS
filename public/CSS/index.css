@@ -33,12 +33,26 @@ body {
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
-/* Logo */
+/*Contenedor del logo (imagen y texto) */
 .logo {
+  display: flex;              /* Coloca imagen y texto en la misma línea */
+  align-items: center;        /* Centra verticalmente ambos */
+  gap: 10px;                  /* Espacio entre la imagen y el texto */
+  flex: 1;                    /* Ocupa espacio disponible a la izquierda */
+}
+
+/*Imagen del logo */
+.logo img {
+  width: 55px;                /* Ancho del logo */
+  height: 55px;               /* Alto del logo */
+  object-fit: contain;        /* Evita que se deforme */
+}
+
+/*Texto del logo */
+.logo span {
   font-size: 24px;
   font-weight: bold;
   color: black;
-  flex: 1;
 }
 
 /* Navegación */
@@ -60,6 +74,12 @@ body {
 }
 
 .nav-links ul li a:hover {
+  color: #ffb703;
+  border-bottom: 2px solid #ffb703;
+}
+
+/* Clase para resaltar el link activo */
+.nav-links ul li a.active {
   color: #ffb703;
   border-bottom: 2px solid #ffb703;
 }

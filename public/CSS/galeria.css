@@ -1,0 +1,114 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+/* Menú */
+.menu {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: #f9f9f9;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 30px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/*Contenedor del logo (imagen y texto) */
+.logo {
+  display: flex;              /* Coloca imagen y texto en la misma línea */
+  align-items: center;        /* Centra verticalmente ambos */
+  gap: 10px;                  /* Espacio entre la imagen y el texto */
+  flex: 1;                    /* Ocupa espacio disponible a la izquierda */
+}
+
+/*Imagen del logo */
+.logo img {
+  width: 55px;                /* Ancho del logo */
+  height: 55px;               /* Alto del logo */
+  object-fit: contain;        /* Evita que se deforme */
+}
+
+/*Texto del logo */
+.logo span {
+  font-size: 24px;
+  font-weight: bold;
+  color: black;
+}
+
+/* Navegación */
+.nav-links ul {
+  display: flex;
+  gap: 100px; /* Espacio entre las palabras del menú */
+  list-style: none;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-links ul li a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  padding: 10px;
+  transition: all 0.3s ease;
+}
+
+.nav-links ul li a:hover {
+  color: #ffb703;
+  border-bottom: 2px solid #ffb703;
+}
+
+/* Clase para resaltar el link activo */
+.nav-links ul li a.active {
+  color: #ffb703;
+  border-bottom: 2px solid #ffb703;
+}
+
+/* Botón login */
+.login {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.login button {
+  padding: 8px 16px;
+  background-color: #219ebc;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.login button:hover {
+  background-color: #ffb703;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .menu {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-links ul {
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+  }
+
+  .login {
+    width: 100%;
+    justify-content: flex-start;
+    margin-top: 10px;
+  }
+}

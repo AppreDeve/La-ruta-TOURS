@@ -11,16 +11,28 @@
     <!-- Menú de navegación fijo -->
   <header>
   <div class="menu">
-    <div class="logo">La ruta tours</div>
+    <div class="logo">
+      <img src="{{ asset('img/logosinfondo.png') }}" alt="logo de la empresa"> <!-- Imagen -->
+      <span>La ruta tours</span> <!-- Texto -->
+    </div>
     
     <nav class="nav-links">
-      <ul>
-        <li><a href="{{ url('/') }}">Home</a></li>
-        <li><a href="{{ route('viajes') }}">Viajes</a></li>
-        <li><a href="{{ route('galeria') }}">Galería</a></li>
-        <li><a href="{{ route('nosotros') }}">Nosotros</a></li>
-      </ul>
-    </nav>
+  <ul>
+    <!-- Si la URL es '/', se agrega la clase 'active' -->
+    <li>
+      <a href="{{ url('/') }}" class="{{ request()->is('/') ? 'active' : '' }}">Home</a>
+    </li>
+    <li>
+      <a href="{{ route('viajes') }}" class="{{ request()->routeIs('viajes') ? 'active' : '' }}">Viajes</a>
+    </li>
+    <li>
+      <a href="{{ route('galeria') }}" class="{{ request()->routeIs('galeria') ? 'active' : '' }}">Galería</a>
+    </li>
+    <li>
+      <a href="{{ route('nosotros') }}" class="{{ request()->routeIs('nosotros') ? 'active' : '' }}">Nosotros</a>
+    </li>
+  </ul>
+</nav>
 
     <div class="login">
       <button onclick="location.href='login.html'">Iniciar sesión</button>
